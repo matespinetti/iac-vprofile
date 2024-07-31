@@ -33,7 +33,7 @@ jobs:
               uses: hashicorp/setup-terraform@v3
             - name: Terraform init
               id: init
-              run: terraform init -backed-config="bucket=${{ env.BUCKET_TF_STATE }}"
+              run: terraform init -backend-config="bucket=${{ env.BUCKET_TF_STATE }}"
 
             - name: Terraform format
               id: format
